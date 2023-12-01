@@ -18,7 +18,6 @@ export const SearchResults = () => {
     fetchData();
   }, []);
   const [apiData, setApiData] = useState([]);
-  const [itemData, setItemData] = useState([]);
 
   const items = apiData.filter(({ title }) => title === searId);
 
@@ -26,32 +25,31 @@ export const SearchResults = () => {
 
   return (
     <div className="main-search">
-      {items && items.map((list, i) => {
-        return (
-          <div className="item-div" key={i}>
-            <h4 className="res-publisher">Author: {list.publisher}</h4>
-            <Link>
-              <h3 className="res-link-1">{list.title}</h3>
-            </Link>
-            <ul className="Subjects">
-              {
-                list.subjects.map((sub,i) => {
+      {items &&
+        items.map((list, i) => {
+          return (
+            <div className="item-div" key={i}>
+              <h7 className="res-publisher-1">Author: {list.publisher}</h7>
+              <Link to="/resultArt" className="result-1-link">
+                <h5 className="res-link-1">{list.title}</h5>
+              </Link>
+              <ul className="Subjects">
+                {list.subjects.map((sub, i) => {
                   return <div className="subject-result">{sub.name}</div>;
-                })
-              }
-            </ul>
-          </div>
-        );
-      })}
+                })}
+              </ul>
+            </div>
+          );
+        })}
 
       <div className="more-result-search-div"> More simular results... </div>
       {apiData.map((item, id) => {
         return (
           <div className="item-div">
-            <h4 className="res-publisher">Author: {item.publisher}</h4>
+            <h7 className="res-publisher">Author: {item.publisher}</h7>
 
             <Link>
-              <h3 className="res-link"> {item.title}</h3>
+              <h5 className="res-link"> {item.title}</h5>
             </Link>
             <ul className="Subjects">
               {item.subjects.map((sub, i) => {

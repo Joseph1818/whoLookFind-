@@ -1,0 +1,29 @@
+.search-bar-container-result-page {
+    padding-top: 2vh;
+    width: 40%;
+    display: flex; 
+    min-width: 200px;
+    margin-left: 2%;
+}
+.search-bar-title-result-page{
+font-size: x-large;
+font-weight:900;
+
+}
+.input-wrapper-result-page {
+    background-color: white;
+        width: 100%;
+        border-radius: 10px;
+        height: 2.5rem;
+        padding: 0 15px;
+        box-shadow: 10px 10px 8px #ddd;
+        display: flex;
+        align-items: center;
+        margin-left: 5%;  
+}
+.grid-main {
+    margin-top: 15vh;
+}
+.publisher-title {
+    font-weight: 200;
+}

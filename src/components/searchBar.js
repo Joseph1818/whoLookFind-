@@ -12,7 +12,7 @@ export const SearchBar = () => {
         .then((json) => {
           const data = json.message.items;
           setFilterData(data);
-          // console.log(results);
+         console.log(data);
         })
         .catch((err) => {
           console.log(err);
