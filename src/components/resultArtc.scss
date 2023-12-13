@@ -1,9 +1,13 @@
 .search-bar-container-result-page {
     padding-top: 2vh;
+    padding-bottom: 5vh;
     width: 40%;
     display: flex; 
     min-width: 200px;
     margin-left: 2%;
+    position: sticky;
+    top: 1em;
+    z-index: 1;
 }
 .search-bar-title-result-page{
 font-size: x-large;
@@ -26,4 +30,29 @@ font-weight:900;
 }
 .publisher-title {
     font-weight: 200;
+}
+.content {
+    width: 100%;
+    max-width: 100vh;
+    margin: 0 auto;
+}
+
+section {
+    display: grid;
+    grid: auto / 200px 1fr;
+    grid-gap: 0 5em;
+    // border: 3px solid red;
+
+    p {
+        grid-column: 2 / 3;
+    }
+}
+
+.section-title {
+    grid-column: 1 / 2;
+    text-align: right;
+    align-self: start;
+    top: 1em;
+    position: sticky;
+    top: 5em;
 }
