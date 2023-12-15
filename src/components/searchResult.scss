@@ -1,25 +1,35 @@
 .main-search {
-    width: 100%;
-    border-radius: 10px;
-    height: 100vh;
-    margin-top: 20px;
+width: 100%;
+max-width: 1000px;
+margin: 2 auto;
+padding-top: 5em;
+padding-left: 10rem;
 }
-.item-div {
-   padding-top: 30px;
-   padding-left: 150px;
+ @media all and (max-width: 899px) {
+     .main-search {
+    padding-left: 5rem;
+     }
+ }
+ @media all and (max-width: 430px) {
+     .main-search {
+         padding-left: 3rem;
+     }
+ }
+
+.child__search {
+
 }
 .more-result-search-div {
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 150px;
 }
 .Subjects{
    margin-top: 5px;
-   font-size: small;
+   font-size: 1.2rem;
 }
 
 .subject-result {
-    font-size: small;
+    font-size: 1rem
 }
 
 .res-link {
@@ -27,7 +37,12 @@
 }
 .res-link-1 {
 color: darkorchid;
+font-size: 1.25rem;
 }
 .result-1-link{
     color: darkviolet;
+}
+
+.res-publisher {
+    font-size: clamp(1rem, 1rem + 10vh, 1rem);
 }

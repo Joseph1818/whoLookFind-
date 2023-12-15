@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
-import { FaAlignCenter, FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import "./searchBar.scss";
 
 export const SearchBar = () => {
@@ -12,7 +12,6 @@ export const SearchBar = () => {
         .then((json) => {
           const data = json.message.items;
           setFilterData(data);
-         console.log(data);
         })
         .catch((err) => {
           console.log(err);
@@ -46,7 +45,7 @@ export const SearchBar = () => {
           />
         </div>
         <div className="results-list">
-          { data.map((d, i) => {
+          {data.map((d, i) => {
             return (
               <div key={i} className="search-result">
                 {" "}
